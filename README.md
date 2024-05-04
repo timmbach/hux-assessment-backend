@@ -26,7 +26,6 @@ This is a simple contacts directory application created for Hux's fullstack deve
 - fetch all existing contacts.
 - edit a single contact.
 - delete a single contact.
-- contacts are a protected route that can only be viewed by an authenticated user.
 
 ## Installation
 
