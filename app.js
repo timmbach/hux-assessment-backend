@@ -29,6 +29,12 @@ import contactRoute from "./routes/contact.js";
 app.use("/api/auth", authRoute);
 app.use("/api/contact", contactRoute);
 
+const swaggerDocument = YAML.load(path.resolve(process.cwd(), "swagger.yaml"));
+
+// Serve Swagger UI
+router.use("/", swaggerUi.serve);
+router.get("/", swaggerUi.setup(swaggerDocument));
+
 // server configurations
 const PORT = process.env.PORT || 8000;
 
